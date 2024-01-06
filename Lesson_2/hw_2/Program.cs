@@ -2,25 +2,13 @@
 int x= int.Parse(Console.ReadLine()!);
 Console.WriteLine("print second number: ");
 int y= int.Parse(Console.ReadLine()!);
-if (x>0)
-{
-    if (y>0)
-    {
-        Console.WriteLine("1");
-    }
-    else
-    {
-        Console.WriteLine("4");
-    }
-}
+if (x>0 && y>0)
+    Console.WriteLine("1");
+else if (x<0 && y>0)
+    Console.WriteLine("2");
+else if (x<0 && y<0)
+    Console.WriteLine("3");
+else if (x>0 && y<0)
+    Console.WriteLine("4");
 else
-{
-    if (y>0)
-    {
-        Console.WriteLine("2");
-    }
-    else
-    {
-        Console.WriteLine("3");
-    }
-}
+    Console.WriteLine("Координата находится на оси координат");
